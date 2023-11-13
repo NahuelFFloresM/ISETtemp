@@ -103,15 +103,25 @@
 
 	//   magnific popup video
 	$('.popup-video').magnificPopup({
-		disableOn: 700,
+		// disableOn: 700,
 		type: 'iframe',
 		mainClass: 'mfp-zoom-in',
 		removalDelay: 160,
 		preloader: false,
+    iframe:{
+      patterns:{
+        youtube:{
+        index: 'youtube.com',
+        id: 'v=',
+        src: 'https://www.youtube.com/embed/QLPNoCnsG1Q?si=H73ri5uL0ZkDLSHk'
+      },
+    },
+    srcAction:'iframe_src',
+  },
 		fixedContentPos: true
 	});
 
-	/* ========================================================================= */
+  /* ========================================================================= */
 	/*	Testimonial Carousel
 	/* =========================================================================  */
 	//Init the carousel
